@@ -1,0 +1,213 @@
+html{scroll-behavior: smooth;}
+*{padding: 0; margin: 0; box-sizing: border-box;}
+body{background: rgba(223, 45, 86, 0.999); font-family: 'Poppins', sans-serif;}
+header{
+    width: 100%;
+    min-height: 100vh;
+    
+    justify-content: center;
+    margin-left: 10%;
+    margin-top: 5%;
+    flex-direction: column;
+
+}
+header img{
+    width: 15rem;
+    height: auto;
+    border-radius: 90%;
+    animation: pulse 1s infinite;
+}
+@keyframes pulse{
+    0%{
+        box-shadow: 0 0 0 0px rgba(0,0,0,0.5);
+    }
+    100%{
+        box-shadow: 0 0 0 30px rgba(0,0,0,0);
+    }
+
+}
+header h3{
+    color: white;
+    margin: 1.5rem 0;
+    letter-spacing: 0,2;
+    font-size: 1.5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+   
+
+}
+header p{
+    color: rgb(21, 255, 0);
+    margin-right: 15%;
+    margin-left: 30%;
+    font-size: 30px;
+    font-family: 'Sail', cursive;
+    
+    
+    
+
+}
+.arrow{
+    color: rgb(138, 114, 181);
+    margin-top: 2rem;
+    margin-left: 5rem;
+    font-size: 100%;
+    animation: arrow 2s ease-in-out infinite;
+
+}
+@keyframes arrow{
+    0%{ color: purple;}
+    50%{color: greenyellow;}
+    100%{color: purple;}
+}
+.container{
+    width: 100%;
+    min-height: 150vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 0.8fr 0.2fr;
+    gap: 1rem;
+    grid-template-areas: "profile profile skills skills"
+                         "edu edu edu Interests"
+                         "contact exp exp exp"
+                         "footer footer footer footer";
+                         padding: 2rem;
+}
+        .profile{
+            background: rgb(209, 137, 137);
+            color: rgb(251, 251, 251);
+            padding: 2rem;
+            grid-area: profile;
+        }
+        .skills{
+            background: rgb(219, 129, 11);
+            color: white;
+            padding: 2rem;
+            grid-area: skills;
+        }
+        .edu{
+            background: rgba(10, 67, 10, 0.747);
+            color: rgb(207, 220, 219);
+            padding: 2rem;
+            grid-area: edu;
+        }
+        .Interests{
+            background: rgb(213, 111, 174);
+            color: #090909;
+            padding: 2rem;
+            grid-area: Interests;
+        }
+        .contact{
+            background: rgb(12, 11, 11);
+            color: #ffffff;
+            padding: 2rem;
+            grid-area: contact;
+        }
+        .exp{
+            background: rgb(193, 117, 117);
+            color: white;
+            padding: 2rem;
+            grid-area: exp;
+        }
+        footer{
+            color: white;
+            background: rgb(29, 145, 171);
+            padding: 2rem;
+            grid-area: footer;
+        }
+h2{
+    margin-bottom: 1rem;
+
+
+}
+.profile p{
+    padding: 0.3rem 1rem;
+    text-align: justify;
+    line-height: 2.2rem;
+}
+.profile a{
+    text-decoration: none;
+    padding: 0.5rem 0.7 rem;
+             background: blueviolet;
+             color: white;
+}
+.skills div{
+    width: 100%;
+    padding: 0.5rem 1rem;
+    color: black;
+}
+.skills div progress[value]{
+    width: 100%;
+    height: 1rem;
+    color: gray;
+}
+.edu h2{
+    letter-spacing: 0.1rem;
+}
+.edu p{
+    padding: 0.3rem 1rem;
+    text-align: justify;
+    line-height: 2.2rem;
+}
+.edu a{
+    text-decoration: none;
+    padding: 0.5rem 0.7 rem;
+             background: white;
+             color: black;
+             font-weight: bold;
+}
+.Interests p{
+    padding: 0.3rem 1rem;
+    text-align: justify;
+    line-height: 2.2rem;
+}
+.contact div i{
+    margin-left: 0.3rem;
+}
+.contact p{
+    margin: 1rem 0;
+    cursor: pointer;
+}
+.exp p{
+    padding: 0.3rem 1rem;
+    text-align: justify;
+    line-height: 2.2rem;
+}
+.exp a{
+    text-decoration: none;
+    padding: 0.5rem 0.7 rem;
+    margin-left: 1rem;
+             background: burlywood;
+             color: black;
+}
+footer i{
+    background: white;
+    color: black;
+    padding: 0.5rem;
+    margin: 1rem 0.2rem;
+    border-radius: 50%;
+    transition: 0.4s;
+
+}
+footer i:hover{
+    background: #0a3d62;
+            color: rgb(140, 44, 44);
+            cursor: pointer;
+}
+footer{
+    text-align: center;
+}
+@media only screen and (max-width: 770px){
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.8fr 0.6fr 1fr 0.6fr 0.5fr 0.8fr 0.1fr;
+        grid-template-areas: "profile"
+        "skills"
+        "edu"
+        "lang"
+        "contact"
+        "exp"
+        "footer";
+    }
+
+}
+        
